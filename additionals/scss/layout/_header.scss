@@ -1,0 +1,95 @@
+.header {
+    height: 100vh;
+    position: relative;
+
+    // @include respond(tab-land) {
+    //     margin-right: 4rem;
+    //     margin-left: 4rem;
+    // }
+
+    // @include respond(tab-port) {
+    //     margin-right: 0rem;
+    //     margin-left: 0rem;
+    // }
+
+    &__button {
+        position: absolute;
+        top: 80%;
+        left: 40px;
+        transform: translateY(-50%);
+
+        @include respond(big-desktop) {
+            left: 20rem;
+        }
+
+        @include respond(tab-port) {
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @include respond(mobile) {
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 60%;
+        left: 40px;
+        transform: translateY(-50%);
+
+        @include respond(big-desktop) {
+            left: 20rem;
+        }
+
+        @include respond(tab-port) {
+            top: 50%;
+            left: 25%;
+            transform: translate(-15%, -35%);
+        }
+
+        @include respond(mobile) {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+
+    }
+
+    &__img-1 {
+        height: 400px;
+        position: absolute;
+        top: 60%;
+        right: 40px;
+        transform: translateY(-50%);
+        z-index: 1;
+
+        @include respond(big-desktop) {
+            right: 20rem;
+        }
+
+        @include respond(tab-land) {
+            height: 400px;
+        }
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__logo {
+        height: 12rem;
+    }
+
+}

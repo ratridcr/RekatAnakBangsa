@@ -1,0 +1,17 @@
+.visi {
+    border: 1px solid $red;
+    border-radius: .3rem;
+    padding: 3rem;
+    height: 20rem;
+    margin: 2rem 0;
+    transition: all .3s;
+
+    @include respond(tab-port) {
+        height: 30rem;
+    }
+
+    &:hover {
+        transform: translateY(-1rem);
+        box-shadow: .5rem 1rem 2rem rgba($red, 0.2);
+    }
+}

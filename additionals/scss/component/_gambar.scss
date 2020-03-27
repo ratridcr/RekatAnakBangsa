@@ -1,0 +1,115 @@
+.gambar {
+    position: relative;
+
+    &__about {
+        width: 100%;
+        height: 100%;
+
+        @include respond(tab-port) {
+            width: 80%;
+            height: 80%;
+            transform: translateX(10%);
+        }
+
+        @include respond(mobile) {
+            display: none;
+        }
+
+    }
+
+    &__photo {
+        width: 55%;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        border-radius: 3px;
+        margin-top: -70%;
+        position: absolute;
+        z-index: 10;
+        transition: all .2s;
+        outline-offset: 2rem;
+
+        @include respond(tab-port) {
+            width: 40%;
+            margin-top: -40%;
+        }
+
+        @include respond(mobile) {
+            outline-offset: .8rem;
+            margin-top: 0;
+            margin-bottom: 10rem;
+            float: left;
+            position: relative;
+            width: 33.33333333%;
+            -webkit-box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+        }
+
+        &--p1 {
+            top: -2vh;
+            left: 7%;
+
+            @include respond(tab-port) {
+                top: -10vh;
+                left: 15%;
+            }
+
+            @include respond(mobile) {
+                top: 0;
+                left: 7%;
+                transform: scale(1.2);
+            }
+        }
+
+        &--p2 {
+            top: 8vh;
+            right: 0;
+
+            @include respond(tab-port) {
+                top: 0;
+                right: 15%;
+            }
+
+            @include respond(mobile) {
+                top: -1rem;
+                right: 0;
+                transform: scale(1.3);
+                z-index: 100;
+            }
+        }
+
+        &--p3 {
+            top: 13vh;
+            left: 20%;
+
+            @include respond(tab-port) {
+                top: 20vh;
+                left: 25%;
+            }
+
+            @include respond(mobile) {
+                top: 1rem;
+                left: 0;
+                transform: scale(1.1);
+            }
+        }
+
+        &:hover {
+            outline: 1.5rem solid $redDark;
+            transform: scale(1.05) translateY(-.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            z-index: 20;
+
+            @include respond(mobile) {
+                outline: 1rem solid $redDark;
+                transform: scale(1.08) translateY(-.5rem);
+            }
+        }
+    }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(.95);
+
+        @include respond(mobile) {
+            transform: scale(1);
+        }
+    }
+}

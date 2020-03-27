@@ -1,0 +1,84 @@
+.footer {
+    background-color: $red;
+    padding: 5rem 0;
+    font-size: 1.4rem;
+    color: $color-black;
+
+    &__judul {
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+    }
+
+    &__desc {
+        color: $color-white;
+        font-weight: 400;
+
+    }
+
+    &__links {
+        letter-spacing: .3rem;
+        font-weight: 300;
+        color: #eaeaea;
+        text-decoration: none;
+        transition: all .3s;
+
+        &:hover {
+            color: $color-black;
+            text-decoration: none;
+        }
+    }
+
+    &__copy {
+        color: $color-white;
+        font-weight: 400;
+        letter-spacing: .1rem;
+        text-align: center;
+    }
+
+    &__logo-box {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    &__logo {
+        width: 15rem;
+        height: auto;
+    }
+
+    &__list {
+        list-style: none;
+
+        &--2 {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 15rem;
+
+            @include respond(tab-port) {
+                justify-content: center;
+                margin-top: 3rem;
+            }
+        }
+
+    }
+
+    &__item {
+        display: flex;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+
+        &--1 {
+            align-items: center;
+        }
+
+        &--2 {
+            margin-right: 2rem;
+        }
+
+        &--p {
+            font-size: 1.8rem;
+            margin-left: 3rem;
+            color: $color-white;
+        }
+
+    }
+}
