@@ -172,7 +172,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .judul__main {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 .judul__sub {
@@ -239,6 +239,11 @@ body {
 
 .u-padding-x-small {
   padding: 0 5rem !important;
+}
+@media only screen and (max-width: 37.5em) {
+  .u-padding-x-small {
+    padding: 0 !important;
+  }
 }
 
 .u-margin-bottom-small {
@@ -676,15 +681,20 @@ ul li.active a {
 .visi {
   border: 1px solid #B9000C;
   border-radius: 0.3rem;
-  padding: 3rem;
   height: 20rem;
-  margin: 2rem 0;
   transition: all 0.3s;
+  position: relative;
 }
 @media only screen and (max-width: 56.25em) {
   .visi {
     height: 30rem;
   }
+}
+.visi__box {
+  margin: 0 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .visi:hover {
   transform: translateY(-1rem);

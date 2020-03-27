@@ -15,7 +15,7 @@
     <div id="visiSwiper" class="swiper-container">
         <div class="swiper-wrapper">
 
-    <?php 
+            <?php 
     $query = new WP_Query(array(
         'post_type' => 'vision',
         'post_status' => 'publish',
@@ -26,14 +26,16 @@
         $query->the_post();
 
         ?>
-      <div class="swiper-slide">
-            <div class="visi">
-                <h3 class="judul__main u-margin-bottom-small"><?=esc_attr($query->post->post_title)?></h3>
-                <p class="judul__sub"><?=esc_attr($query->post->post_content)?></p>
+            <div class="swiper-slide">
+                <div class="visi">
+                    <div class="visi__box">
+                        <h3 class="judul__main u-margin-bottom-small"><?=esc_attr($query->post->post_title)?></h3>
+                        <p class="judul__sub"><?=esc_attr($query->post->post_content)?></p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <?php
+            <?php
     }
 
 
